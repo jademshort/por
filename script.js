@@ -85,13 +85,25 @@ class PixelPortfolio {
             if (currentIndex < characters.length) {
                 // Make current character visible
                 characters[currentIndex].classList.add('typed');
+                
+                // Move cursor to after the current character
+                const currentChar = characters[currentIndex];
+                currentChar.parentNode.removeChild(cursor);
+                
+                // Insert cursor after current character
+                if (currentIndex + 1 < characters.length) {
+                    characters[currentIndex + 1].parentNode.insertBefore(cursor, characters[currentIndex + 1]);
+                } else {
+                    // If this is the last character, append cursor at the end
+                    currentChar.parentNode.appendChild(cursor);
+                }
+                
                 currentIndex++;
                 
                 // Continue typing after delay
                 setTimeout(typeNextLetter, typingSpeed);
             } else {
-                // Finished typing - change cursor to finished state
-                cursor.classList.remove('typing');
+                // Finished typing - change cursor to finished blinking state
                 cursor.classList.add('finished');
                 
                 // Show portfolio after a pause

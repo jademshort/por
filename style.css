@@ -168,33 +168,19 @@ body::after {
     height: 1em;
     background: var(--accent-mauve);
     margin-left: 2px;
-    animation: cursorBlink 1s infinite;
     vertical-align: text-bottom;
     box-shadow: 0 0 10px var(--accent-mauve);
-}
-
-.typing-cursor.typing {
-    animation: cursorType 0.1s infinite;
+    opacity: 1;
 }
 
 .typing-cursor.finished {
-    animation: cursorFade 2s ease-in-out infinite;
-}
-
-@keyframes cursorBlink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0; }
-}
-
-@keyframes cursorType {
-    0%, 40% { opacity: 1; }
-    41%, 100% { opacity: 0; }
+    animation: cursorFade 1.5s ease-in-out infinite;
 }
 
 @keyframes cursorFade {
-    0%, 70% { opacity: 1; }
-    71%, 85% { opacity: 0; }
-    86%, 100% { opacity: 1; }
+    0%, 60% { opacity: 1; }
+    61%, 80% { opacity: 0; }
+    81%, 100% { opacity: 1; }
 }
 
 .space {

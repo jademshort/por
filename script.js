@@ -1,41 +1,18 @@
 // jade's archive - Pixelated portfolio JavaScript
 class PixelPortfolio {
     constructor() {
-        this.titleScreen = document.getElementById('titleScreen');
         this.pixelTitleContainer = document.getElementById('pixelTitleContainer');
         this.pixelTitle = document.getElementById('pixelTitle');
         this.portfolioContent = document.getElementById('portfolioContent');
-        this.isAnimating = false;
         
         this.init();
     }
     
     init() {
-        this.setupClickListener();
         this.setupNavigation();
         this.createCustomCursor();
-    }
-    
-    setupClickListener() {
-        // Click anywhere to start the pixel animation
-        document.addEventListener('click', (e) => {
-            if (!this.isAnimating && !this.titleScreen.classList.contains('hidden')) {
-                this.startPixelAnimation();
-            }
-        }, { once: true });
-    }
-    
-    startPixelAnimation() {
-        this.isAnimating = true;
-        
-        // Hide title screen
-        this.titleScreen.style.opacity = '0';
-        
-        setTimeout(() => {
-            this.titleScreen.classList.add('hidden');
-            this.pixelTitleContainer.classList.remove('hidden');
-            this.createPixelTitle();
-        }, 800);
+        // Start typing immediately
+        this.createPixelTitle();
     }
     
     createPixelTitle() {

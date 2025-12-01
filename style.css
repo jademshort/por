@@ -6,7 +6,7 @@
     --text-secondary: #a0a0a0;
     --accent-mauve: #b8869d;
     --accent-bright: #d4a5c0;
-    --terminal-green: #00ff41;
+    --terminal-green: #ffffff;
     --pixel-size: 8px;
 }
 
@@ -443,7 +443,7 @@ body::after {
 }
 
 .status-online {
-    color: var(--terminal-green);
+    color: var(--text-primary);
 }
 
 /* Responsive Design */

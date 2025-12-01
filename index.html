@@ -21,151 +21,152 @@
     </div>
     
     <!-- Portfolio Content (appears after title animation) -->
-    <div class="portfolio-content hidden" id="portfolioContent">
-        <div class="content-wrapper">
-            <div class="nav-menu">
-                <div class="nav-item" data-section="about">
-                    <span class="nav-bracket">[</span>
-                    <span class="nav-text">about</span>
-                    <span class="nav-bracket">]</span>
-                </div>
-                <div class="nav-item" data-section="work">
-                    <span class="nav-bracket">[</span>
-                    <span class="nav-text">work</span>
-                    <span class="nav-bracket">]</span>
-                </div>
-                <div class="nav-item" data-section="lab">
-                    <span class="nav-bracket">[</span>
-                    <span class="nav-text">lab</span>
-                    <span class="nav-bracket">]</span>
-                </div>
-                <div class="nav-item" data-section="contact">
-                    <span class="nav-bracket">[</span>
-                    <span class="nav-text">contact</span>
-                    <span class="nav-bracket">]</span>
-                </div>
-            </div>
-            
-            <div class="content-area">
-                <div class="section" id="about">
-                    <div class="terminal-window">
-                        <div class="terminal-header">
-                            <div class="terminal-title">about.txt</div>
-                        </div>
-                        <div class="terminal-body">
-                            <div class="terminal-line">
-                                <span class="prompt">jade@archive:~$</span> cat about.txt
-                            </div>
-                            <div class="terminal-content">
-                                <p>creative technologist living at the intersection</p>
-                                <p>of art, code, and digital expression.</p>
-                                <br>
-                                <p>i build experiences that blur the lines between</p>
-                                <p>human creativity and computational possibilities.</p>
-                                <br>
-                                <p>currently exploring: generative art, interactive</p>
-                                <p>installations, and the aesthetics of obsolete tech.</p>
-                            </div>
+    <div class="portfolio-content" id="portfolioContent">
+        <!-- About Me Section -->
+        <section class="portfolio-section" id="aboutSection">
+            <div class="section-container">
+                <h2 class="section-header">who am i?</h2>
+                <div class="about-content">
+                    <div class="about-photo">
+                        <div class="photo-placeholder">
+                            <span>photo coming soon</span>
                         </div>
                     </div>
-                </div>
-                
-                <div class="section" id="work">
-                    <div class="terminal-window">
-                        <div class="terminal-header">
-                            <div class="terminal-title">work/</div>
+                    <div class="about-text">
+                        <div class="bio-text">
+                            <p>I'm Jade. A junior front-end developer with a passion for design. I love creating clean, intuitive interfaces that look beautiful.</p>
+                            
+                            <p>I work with HTML, CSS, JavaScript, and responsive design, and I'm building experience in wireframing and prototyping using Figma.</p>
+                            
+                            <p>Currently working on my bachelor's in sociology at Arizona State University (because I love people), and have completed a web development certification with The Global Career Accelerator (because I love creating).</p>
                         </div>
-                        <div class="terminal-body">
-                            <div class="terminal-line">
-                                <span class="prompt">jade@archive:~$</span> ls work/
+                        
+                        <div class="skills-section">
+                            <div class="skills-column">
+                                <h3 class="skills-title">current skills</h3>
+                                <ul class="skills-list">
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>Responsive Web Design</li>
+                                </ul>
                             </div>
-                            <div class="terminal-content">
-                                <div class="file-list">
-                                    <div class="file-item">
-                                        <span class="file-name">neural_landscapes.exe</span>
-                                        <span class="file-desc">// ai-generated terrain visualization</span>
-                                    </div>
-                                    <div class="file-item">
-                                        <span class="file-name">glitch_portraits.dat</span>
-                                        <span class="file-desc">// corrupted beauty series</span>
-                                    </div>
-                                    <div class="file-item">
-                                        <span class="file-name">retro_synth.wav</span>
-                                        <span class="file-desc">// procedural music generator</span>
-                                    </div>
-                                    <div class="file-item">
-                                        <span class="file-name">data_dreams.js</span>
-                                        <span class="file-desc">// interactive data visualization</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="section" id="lab">
-                    <div class="terminal-window">
-                        <div class="terminal-header">
-                            <div class="terminal-title">experiments.log</div>
-                        </div>
-                        <div class="terminal-body">
-                            <div class="terminal-line">
-                                <span class="prompt">jade@archive:~$</span> tail experiments.log
-                            </div>
-                            <div class="terminal-content">
-                                <div class="log-entry">
-                                    <span class="timestamp">[2024.11.28]</span>
-                                    <span class="log-text">testing pixel shader distortions</span>
-                                </div>
-                                <div class="log-entry">
-                                    <span class="timestamp">[2024.11.25]</span>
-                                    <span class="log-text">generative typography experiments</span>
-                                </div>
-                                <div class="log-entry">
-                                    <span class="timestamp">[2024.11.20]</span>
-                                    <span class="log-text">vintage crt simulation algorithms</span>
-                                </div>
-                                <div class="log-entry">
-                                    <span class="timestamp">[2024.11.15]</span>
-                                    <span class="log-text">neural network art generation</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="section" id="contact">
-                    <div class="terminal-window">
-                        <div class="terminal-header">
-                            <div class="terminal-title">connect.sh</div>
-                        </div>
-                        <div class="terminal-body">
-                            <div class="terminal-line">
-                                <span class="prompt">jade@archive:~$</span> ./connect.sh
-                            </div>
-                            <div class="terminal-content">
-                                <div class="connect-item">
-                                    <span class="connect-label">email:</span>
-                                    <span class="connect-value">jade@domain.com</span>
-                                </div>
-                                <div class="connect-item">
-                                    <span class="connect-label">github:</span>
-                                    <span class="connect-value">github.com/jade</span>
-                                </div>
-                                <div class="connect-item">
-                                    <span class="connect-label">instagram:</span>
-                                    <span class="connect-value">@jade.creates</span>
-                                </div>
-                                <div class="connect-item">
-                                    <span class="connect-label">status:</span>
-                                    <span class="connect-value status-online">● available for projects</span>
-                                </div>
+                            <div class="skills-column">
+                                <h3 class="skills-title">developing skills</h3>
+                                <ul class="skills-list">
+                                    <li>Figma</li>
+                                    <li>Node.js</li>
+                                    <li>React</li>
+                                    <li>Express.js</li>
+                                    <li>Next.js</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section class="portfolio-section" id="projectsSection">
+            <div class="section-container">
+                <h2 class="section-header">my work</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">water_walk.exe</h3>
+                            <a href="#" class="project-link" target="_blank">[view live]</a>
+                        </div>
+                        <div class="project-description">
+                            <p>Minigame created for charity: water with the purpose of spreading awareness about access to clean water.</p>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Itch.io Assets</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">loreal_routine.js</h3>
+                            <a href="#" class="project-link" target="_blank">[view live]</a>
+                        </div>
+                        <div class="project-description">
+                            <p>L'Oreal product routine builder site with an AI chatbot assistant, made using APIs.</p>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">APIs</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">game_wireframe.fig</h3>
+                            <a href="#" class="project-link" target="_blank">[view design]</a>
+                        </div>
+                        <div class="project-description">
+                            <p>Wireframe concept work for my minigame, showcasing UX/UI design process and user flow planning.</p>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">UX Design</span>
+                            <span class="tech-tag">Wireframing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section class="portfolio-section" id="contactSection">
+            <div class="section-container">
+                <h2 class="section-header">find me here</h2>
+                <div class="contact-content">
+                    <div class="contact-links">
+                        <div class="contact-item">
+                            <span class="contact-icon">@</span>
+                            <a href="mailto:jademckenzieshort@gmail.com" class="contact-link">jademckenzieshort@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🔗</span>
+                            <a href="https://www.linkedin.com/in/jademshort" class="contact-link" target="_blank">LinkedIn</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">💻</span>
+                            <a href="https://github.com/jademshort" class="contact-link" target="_blank">GitHub</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📌</span>
+                            <a href="https://pin.it/4G2CvWdt4" class="contact-link" target="_blank">Pinterest</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3 class="form-title">send_message.exe</h3>
+                        <form class="terminal-form">
+                            <div class="form-group">
+                                <label>name:</label>
+                                <input type="text" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>email:</label>
+                                <input type="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label>message:</label>
+                                <textarea name="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">[send]</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
     
     <script src="script.js"></script>

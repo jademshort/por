@@ -13,6 +13,11 @@ class PixelPortfolio {
         this.createCustomCursor();
         // Start typing immediately
         this.createPixelTitle();
+        
+        // For testing: make content visible right away
+        setTimeout(() => {
+            this.showPortfolioContent();
+        }, 100);
     }
     
     createPixelTitle() {
@@ -97,42 +102,17 @@ class PixelPortfolio {
     showPortfolioContent() {
         this.portfolioContent.classList.remove('hidden');
         
-        // Scroll to content smoothly
-        setTimeout(() => {
-            window.scrollTo({
-                top: window.innerHeight,
-                behavior: 'smooth'
-            });
-        }, 500);
+        // Move title container out of the way so content is scrollable
+        this.pixelTitleContainer.style.position = 'relative';
+        this.pixelTitleContainer.style.height = '100vh';
+        
+        // Enable scrolling
+        document.body.style.overflow = 'auto';
     }
     
     setupNavigation() {
-        const navItems = document.querySelectorAll('.nav-item');
-        const sections = document.querySelectorAll('.section');
-        
-        navItems.forEach(item => {
-            item.addEventListener('click', () => {
-                const sectionId = item.getAttribute('data-section');
-                
-                // Update active nav
-                navItems.forEach(nav => nav.classList.remove('active'));
-                item.classList.add('active');
-                
-                // Show section
-                sections.forEach(section => section.classList.remove('active'));
-                const targetSection = document.getElementById(sectionId);
-                if (targetSection) {
-                    targetSection.classList.add('active');
-                }
-                
-                this.addClickEffect(item);
-            });
-        });
-        
-        // Show about section by default
-        if (navItems.length > 0) {
-            setTimeout(() => navItems[0].click(), 100);
-        }
+        // No navigation needed for scroll-based layout
+        // Could add smooth scroll to section functionality here later
     }
     
     addClickEffect(element) {

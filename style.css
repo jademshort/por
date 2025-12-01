@@ -212,16 +212,31 @@ body::after {
 /* Portfolio Content */
 .portfolio-content {
     position: relative;
-    min-height: 200vh;
-    padding-top: 100vh;
     transition: opacity 1s ease;
     z-index: 10;
 }
 
-.content-wrapper {
+.portfolio-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.section-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+.section-header {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 2rem;
+    color: var(--accent-mauve);
+    text-align: center;
+    margin-bottom: 3rem;
+    text-shadow: 0 0 20px var(--accent-mauve);
 }
 
 /* Navigation */
@@ -474,6 +489,227 @@ body::after {
 
 .glitch {
     animation: glitch 0.3s infinite;
+}
+
+/* About Section */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.photo-placeholder {
+    width: 300px;
+    height: 300px;
+    background: var(--bg-darker);
+    border: 2px solid var(--accent-mauve);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.bio-text p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.skills-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--accent-mauve);
+}
+
+.skills-title {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.8rem;
+    color: var(--accent-bright);
+    margin-bottom: 1rem;
+    text-transform: lowercase;
+}
+
+.skills-list {
+    list-style: none;
+}
+
+.skills-list li {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    position: relative;
+}
+
+.skills-list li::before {
+    content: '> ';
+    color: var(--accent-mauve);
+    font-weight: bold;
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--bg-darker);
+    border: 2px solid var(--accent-mauve);
+    padding: 2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(184, 134, 157, 0.3);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.project-title {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.9rem;
+    color: var(--accent-bright);
+}
+
+.project-link {
+    color: var(--accent-mauve);
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: var(--accent-bright);
+    text-shadow: 0 0 10px var(--accent-mauve);
+}
+
+.project-description {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag {
+    background: rgba(184, 134, 157, 0.2);
+    color: var(--accent-bright);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    border: 1px solid var(--accent-mauve);
+}
+
+/* Contact Section */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+.contact-icon {
+    font-size: 1.2rem;
+    color: var(--accent-mauve);
+    min-width: 30px;
+}
+
+.contact-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--accent-bright);
+    text-shadow: 0 0 10px var(--accent-mauve);
+}
+
+.form-title {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.9rem;
+    color: var(--accent-bright);
+    margin-bottom: 1.5rem;
+}
+
+.terminal-form {
+    background: var(--bg-darker);
+    border: 2px solid var(--accent-mauve);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    color: var(--accent-mauve);
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background: var(--bg-dark);
+    border: 1px solid var(--accent-mauve);
+    color: var(--text-primary);
+    padding: 0.8rem;
+    border-radius: 4px;
+    font-family: 'Source Code Pro', monospace;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-bright);
+    box-shadow: 0 0 10px rgba(184, 134, 157, 0.3);
+}
+
+.submit-btn {
+    background: var(--accent-mauve);
+    color: var(--bg-darker);
+    border: none;
+    padding: 0.8rem 2rem;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: var(--accent-bright);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(184, 134, 157, 0.4);
 }
 
 .terminal-title {
